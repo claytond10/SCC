@@ -1,0 +1,27 @@
+<div class="col-lg-6 add-main">
+    <h2 class="text-center" >Add Location Type</h2> 
+    <form [formGroup]="addLocationTypeForm" novalidate class="form">
+      <div class="form-group">
+        <label for="loc_cd">Location Type Code</label>
+        <input type="text" formControlName="loc_cd" placeholder="XX" name="loc_cd" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addLocationTypeForm.get('loc_cd').hasError('required') && addLocationTypeForm.get('loc_cd').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addLocationTypeForm.get('loc_cd').hasError('maxlength')">
+          Max field length of 2 characters exceeded.
+      </div> 
+      <div class="form-group">
+        <label for="loc_cd_full">Location Type Name</label>
+        <input type="text" formControlName="loc_cd_full" placeholder="Image Name" name="loc_cd_full" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addLocationTypeForm.get('loc_cd_full').hasError('required') && addLocationTypeForm.get('loc_cd_full').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addLocationTypeForm.get('loc_cd_full').hasError('maxlength')">
+          Max field length of 25 characters exceeded.
+      </div> 
+      <button class="btn btn-success" (click)="onSubmit()">Save</button>
+    </form>
+  </div>
+

@@ -1,0 +1,20 @@
+<div>
+    <br />
+    <h2>Upcoming Events
+        <button *ngIf="!router.url.includes('Sign')" class="btn btn-primary float-right" (click)="click_add()">
+            <i class="far fa-plus-square"></i>
+        </button>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let event of events">
+            <td>{{ event.event_date }}</td>
+            <td>{{ event.event_time }}</td>
+            <td>{{ event.event_name }}</td>
+            <td>{{ event.location_name }}</td>
+            <td>{{ event.contact_name }}</td>
+            <td *ngIf="!router.url.includes('Sign')"><button class="btn btn-success" (click)="edit(event)"><i class="fas fa-edit"></i></button></td>
+            <td *ngIf="!router.url.includes('Sign')"><button class="btn btn-danger" (click)="delete(event)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table>
+</div>

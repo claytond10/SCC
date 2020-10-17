@@ -1,0 +1,19 @@
+<div>
+    <br />
+    <h2>Locations List
+        <button class="btn btn-primary float-right" (click)="click_add()">
+            <i class="far fa-plus-square"></i>
+        </button>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let loc of locations">
+            <td>{{ loc.id }}</td>
+            <td>{{ loc.location_name }}</td>
+            <td>{{ loc.loc_cd_full }}</td>
+            <td [innerHTML]='loc.image_html'></td>
+            <td><button class="btn btn-success" (click)="edit(loc)"><i class="fas fa-edit"></i></button></td>
+            <td><button class="btn btn-danger" (click)="delete(loc)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table> 
+</div>

@@ -1,0 +1,18 @@
+<div>
+    <br />
+        <h2>Contact List
+            <button class="btn btn-primary float-right" (click)="click_add()">
+                <i class="far fa-plus-square"></i>
+            </button>
+        </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let cont of contacts">
+            <td>{{ cont.contact_name }}</td>
+            <td>{{ cont.phone }}</td>
+            <td>{{ cont.email }}</td>
+            <td><button class="btn btn-success" (click)="edit(cont)"><i class="fas fa-edit"></i></button></td>
+            <td><button class="btn btn-danger" (click)="delete(cont)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table>
+</div>

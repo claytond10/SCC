@@ -1,0 +1,19 @@
+<div class="col-lg-6 add-main">
+    <h2 class="text-center" >Edit Announcement</h2> 
+    <form [formGroup]="editAnnouncementForm" novalidate class="form">
+      <div class="form-group add-main">
+        <label for="announcement">Announcement</label>
+        <input type="text" formControlName="announcement" placeholder="Annoncement" name="announcement" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="editAnnouncementForm.get('announcement').hasError('required') && editAnnouncementForm.get('announcement').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="editAnnouncementForm.get('announcement').hasError('maxlength')">
+          Max field length of 50 characters exceeded.
+      </div> 
+      <div>
+        <button class="btn btn-success" (click)="update()">Update</button>&nbsp;
+        <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>

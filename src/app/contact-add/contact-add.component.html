@@ -1,0 +1,36 @@
+<div class="col-lg-6 add-main">
+    <h2 class="text-center" >Add Contact</h2> 
+    <form [formGroup]="addContactForm" novalidate class="form">
+      <div class="form-group">
+        <label for="contact_name">Contact Name</label>
+        <input type="text" formControlName="contact_name" placeholder="Contact Name" name="contact_name" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addContactForm.get('contact_name').hasError('required') && addContactForm.get('contact_name').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addContactForm.get('contact_name').hasError('maxlength')">
+          Max field length of 50 characters exceeded.
+      </div> 
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" formControlName="phone" placeholder="111-111-1111" name="phone" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addContactForm.get('phone').hasError('required') && addContactForm.get('phone').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addContactForm.get('phone').hasError('maxlength')">
+          Max field length of 12 characters exceeded.
+      </div> 
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" formControlName="email" placeholder="Email Address" name="email" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addContactForm.get('email').hasError('required') && addContactForm.get('email').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addContactForm.get('email').hasError('maxlength')">
+          Max field length of 50 characters exceeded.
+      </div> 
+      <button class="btn btn-success" (click)="onSubmit()">Save</button>
+    </form>
+  </div>

@@ -1,0 +1,16 @@
+<div>
+    <br />
+    <h2>Announcement List
+        <button class="btn btn-primary float-right" (click)="click_add()">
+            <i class="far fa-plus-square"></i>
+        </button>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let ann of announcements">
+            <td>{{ ann.announcement }}</td>
+            <td><button class="btn btn-success" (click)="edit(ann)"><i class="fas fa-edit"></i></button></td>
+            <td><button class="btn btn-danger" (click)="delete(ann)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table> 
+</div>

@@ -1,0 +1,19 @@
+<div>
+    <br />
+    <h2>Schedule
+        <button *ngIf="!router.url.includes('Sign')" class="btn btn-primary float-right" (click)="click_add()">
+            <i class="far fa-plus-square"></i>
+        </button>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let sch of schedule">
+            <td>{{ sch.schedule_date }}</td>
+            <td>{{ sch.schedule_time }}</td>
+            <td>{{ sch.activity_name }}</td>
+            <td *ngIf="!router.url.includes('Sign')"><button class="btn btn-success" (click)="edit(sch)"><i class="fas fa-edit"></i></button></td>
+            <td *ngIf="!router.url.includes('Sign')"><button class="btn btn-danger" (click)="delete(sch)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table>
+</div>
+

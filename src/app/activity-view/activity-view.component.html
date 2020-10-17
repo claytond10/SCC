@@ -1,0 +1,16 @@
+<div>
+    <br />
+    <h2>Activity List
+        <button class="btn btn-primary float-right" (click)="click_add()">
+            <i class="far fa-plus-square"></i>
+        </button>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let act of activities">
+            <td>{{ act.activity_name }}</td>
+            <td><button class="btn btn-success" (click)="edit(act)"><i class="fas fa-edit"></i></button></td>
+            <td><button class="btn btn-danger" (click)="delete(act)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table>
+</div>

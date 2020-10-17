@@ -1,0 +1,21 @@
+<div>
+    <br />
+    <h2>Scripture
+        <button class="btn btn-primary float-right" (click)="click_add()">
+            <i class="far fa-plus-square"></i>
+        </button>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let scr of scripture">
+            <td>{{ scr.id }}</td>
+            <td>{{ scr.book }}</td>
+            <td>{{ scr.chapter }}</td>
+            <td>{{ scr.verse }}</td>
+            <td>{{ scr.s_text }}</td>
+            <td>{{ scr.s_date }}</td>
+            <td><button class="btn btn-success" (click)="edit(scr)"><i class="fas fa-edit"></i></button></td>
+            <td><button class="btn btn-danger" (click)="delete(scr)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table>
+</div>

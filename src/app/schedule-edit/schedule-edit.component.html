@@ -1,0 +1,34 @@
+<div class="col-lg-6 add-main">
+    <h2 class="text-center" >Edit Schedule</h2> 
+    <form [formGroup]="editScheduleForm" novalidate class="form">
+        <div class="form-group">
+            <input type="hidden" formControlName="schedule_id" name="schedule_id" class="form-control">
+        </div> 
+        <div class="form-group">
+            <label for="schedule_date">Date</label>
+            <input type="text" formControlName="schedule_date" placeholder="YYYY-MM-DD" name="schedule_date" class="form-control">
+        </div> 
+        <div class="alert alert-danger" *ngIf="editScheduleForm.get('schedule_date').hasError('required') && editScheduleForm.get('schedule_date').touched">
+            Field is required.
+        </div> 
+        <div>
+            <label for="event_time">Time</label>
+            <input type="text" formControlName="schedule_time" placeholder="HH:MM" name="schedule_time" class="form-control">
+        </div> 
+        <div class="alert alert-danger" *ngIf="editScheduleForm.get('schedule_time').hasError('required') && editScheduleForm.get('schedule_time').touched">
+            Field is required.
+        </div> 
+        <div class="form-group">
+            <label for="activity_id">Activity</label>
+            <select formControlName="activity_id" id="activity_id"> <br />
+                <option *ngFor="let act of activities; let i = index" [value]="activities[i].id">
+                    {{ activities[i].activity_name }}
+                </option>
+            </select>
+        </div>
+        <button class="btn btn-success" (click)="update()">Update</button>
+        <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+    </form>
+</div>
+
+

@@ -1,0 +1,36 @@
+<div class="col-lg-6 add-main">
+    <h2 class="text-center" >Edit Location</h2> 
+    <form [formGroup]="editLocationForm" novalidate class="form">
+        <div class="form-group">
+            <input type="hidden" formControlName="id" name="id" class="form-control">
+          </div> 
+      <div class="form-group">
+        <label for="location_name">Location</label>
+        <input type="text" formControlName="location_name" placeholder="Location Name" name="location_name" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="editLocationForm.get('location_name').hasError('required') && editLocationForm.get('location_name').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="editLocationForm.get('location_name').hasError('maxlength')">
+          Max field length of 50 characters exceeded.
+      </div> 
+      <div class="form-group">
+        <label for="location_cd">Location Type</label>
+        <select formControlName="loc_cd" id="loc_cd"> <br />
+            <option *ngFor="let type of locationTypes; let i = index" [value]="locationTypes[i].loc_cd">
+                {{ locationTypes[i].loc_cd_full }}
+            </option>
+         </select>
+    </div>
+    <div class="form-group">
+        <label for="image_id">Images</label>
+        <select formControlName="image_id" id="image_id"> <br />
+            <option *ngFor="let img of images; let i = index" [value]="images[i].id">
+                {{ images[i].image_name }}
+            </option>
+         </select>
+    </div>
+      <button class="btn btn-success" (click)="update()">Update</button>
+      <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+    </form>
+  </div>

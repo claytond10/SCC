@@ -1,0 +1,26 @@
+<div class="col-lg-6 add-main">
+    <h2 class="text-center" >Add Image</h2> 
+    <form [formGroup]="addImageForm" novalidate class="form">
+      <div class="form-group">
+        <label for="image_html">Image HTML</label>
+        <input type="text" formControlName="image_html" placeholder="&lt;html /&gt;" name="image_html" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addImageForm.get('image_html').hasError('required') && addImageForm.get('image_html').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addImageForm.get('image_html').hasError('maxlength')">
+          Max field length of 25 characters exceeded.
+      </div> 
+      <div class="form-group">
+        <label for="image_name">Image Name</label>
+        <input type="text" formControlName="image_name" placeholder="Image Name" name="image_name" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addImageForm.get('image_name').hasError('required') && addImageForm.get('image_name').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addImageForm.get('image_name').hasError('maxlength')">
+          Max field length of 25 characters exceeded.
+      </div> 
+      <button class="btn btn-success" (click)="onSubmit()">Save</button>
+    </form>
+  </div>

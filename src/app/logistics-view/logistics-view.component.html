@@ -1,0 +1,19 @@
+<div>
+    <br />
+    <h2>Logistics
+        <button *ngIf="!router.url.includes('Sign')" class="btn btn-primary float-right" (click)="click_add()">
+            <i class="far fa-plus-square"></i>
+        </button>
+    </h2>
+    <br />
+    <table class="table table-striped">
+        <tr *ngFor="let log of logistics">
+            <td>{{ log.log_name }}</td>
+            <td>{{ log.location_name }}</td>
+            <td *ngIf="!router.url.includes('Sign')">{{ log.image_name }}</td>
+            <td [innerHTML]='log.image_html'></td>
+            <td *ngIf="!router.url.includes('Sign')"><button class="btn btn-success" (click)="edit(log)"><i class="fas fa-edit"></i></button></td>
+            <td *ngIf="!router.url.includes('Sign')"><button class="btn btn-danger" (click)="delete(log)"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>
+    </table>
+</div>

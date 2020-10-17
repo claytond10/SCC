@@ -1,0 +1,47 @@
+<div class="col-lg-6 add-main">
+    <h2 class="text-center" >Add Upcoming Event</h2> 
+    <form [formGroup]="addUpcomingEventForm" novalidate class="form">
+      <div class="form-group">
+        <input type="hidden" formControlName="event_id" name="event_id" class="form-control">
+      </div> 
+      <div class="form-group">
+        <label for="event_name">Event Name</label>
+        <input type="text" formControlName="event_name" placeholder="Event Name" name="event_name" class="form-control">
+      </div> 
+      <div class="alert alert-danger" *ngIf="addUpcomingEventForm.get('event_name').hasError('required') && addUpcomingEventForm.get('event_name').touched">
+          Field is required.
+      </div> 
+      <div class="alert alert-danger" *ngIf="addUpcomingEventForm.get('event_name').hasError('maxlength')">
+          Max field length of 25 characters exceeded.
+      </div> 
+      <div>
+        <label for="event_date">Event Date</label>
+        <input type="text" formControlName="event_date" placeholder="YYYY-MM-DD" name="event_date" class="form-control">
+       </div> 
+       <div>
+        <label for="event_time">Event Time</label>
+        <input type="text" formControlName="event_time" placeholder="HH:MM" name="event_time" class="form-control">
+       </div> 
+        <div class="alert alert-danger" *ngIf="addUpcomingEventForm.get('event_time').hasError('required') && addUpcomingEventForm.get('event_time').touched">
+            Field is required.
+        </div> 
+
+        <div class="form-group">
+          <label for="location_id">Location</label>
+          <select formControlName="location_id" id="location_id"> <br />
+              <option *ngFor="let loc of locations; let i = index" [value]="locations[i].id">
+                  {{ locations[i].location_name }}
+              </option>
+           </select>
+      </div>
+      <div class="form-group">
+        <label for="contact_id">Contact</label>
+        <select formControlName="contact_id" id="contact_id"> <br />
+            <option *ngFor="let con of contacts; let i = index" [value]="contacts[i].id">
+                {{ contacts[i].contact_name }}
+            </option>
+         </select>
+    </div>
+    <button class="btn btn-success" (click)="onSubmit()">Save</button>
+    </form>
+  </div>

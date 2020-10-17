@@ -1,0 +1,11 @@
+<app-header *ngIf="!router.url.includes('Sign')"></app-header>
+
+<div  *ngIf="!router.url.includes('Sign')" class="container">        
+    <router-outlet></router-outlet>
+</div>
+<div *ngIf="router.url.includes('Sign')" class="container-flex">        
+    <router-outlet></router-outlet>
+</div>
+<app-footer *ngIf="!router.url.includes('Sign')"></app-footer>
+
+
