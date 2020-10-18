@@ -4,7 +4,7 @@
 -- --------------------------------------------------------------------------------
 DELIMITER $$
 
-CREATE DEFINER=`scc_dba`@`%` PROCEDURE `sp_AddActivity`(IN iName VARCHAR(50),IN iPhone VARCHAR(12),IN iEmail VARCHAR(50))
+CREATE DEFINER=`scc_dba`@`%` PROCEDURE `sp_AddContact`(IN iName VARCHAR(50),IN iPhone VARCHAR(12),IN iEmail VARCHAR(50))
     COMMENT 'Procdure to insert a single Contact'
 BEGIN
     INSERT INTO contact (contact_name, phone, email)
