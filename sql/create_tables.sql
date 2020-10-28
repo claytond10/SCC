@@ -5,7 +5,7 @@ CREATE TABLE `scc`.`activity` (
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
   UNIQUE INDEX `activity_name_UNIQUE` (`activity_name` ASC));
 
-CREATE TABLE `scc`.`announcment` (
+CREATE TABLE `scc`.`announcement` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `announcement` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
