@@ -1,1 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
+.std-list {
+  padding: 20px;
+}
+.add-main {
+  padding: 30px;
+}
+
+body {
+  background-color: #c6c6c6;
+}
+
+.main-body {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 150%;
+}
+
+.cust-header {
+  background: #343a40;
+  color: white;
+  margin-bottom: 0.5em;
+}
+
+.cust-footer {
+  background: #343a40;
+  color: white;
+  position: fixed;
+}
+
+.navbar-brand {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+
+/*active*/
+.nav-pills .pill-white .nav-link:not(.active) {
+  background-color: transparent;
+  color: gray;
+}
+/*not active*/
+.nav-pills .pill-white .nav-link {
+  background-color: transparent;
+  color: white;
+}
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+.img-center-sign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.vl {
+  display: block;
+  border-left: 1px solid black;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  margin-right: 0.5em;
+  top: 0;
+}
+
+img {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.hl {
+  display: block;
+  border-top: 1px solid black;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.marquee {
+  background: #606060;
+  overflow: hidden;
+  position: fixed;
+  bottom: 40px;
+}
+
+.marquee p {
+  position: sticky;
+  margin: 10;
+  font-size: 20px;
+  color: #dede89;
+  width: 2800px;
+  /* Starting position */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  /* Apply animation to this element */
+  -moz-animation: marquee 30s linear infinite;
+  -webkit-animation: marquee 30s linear infinite;
+  animation: marquee 30s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes marquee {
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+}
+
+p .icon-check {
+  color: green;
+}
+
+.jumbotron {
+  position: relative;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: black;
+  width: 50%;
+}
+
+.custom-select {
+  border: 1px solid #ced4da;
+  overflow: hidden;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.custom-select select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+.custom-select select:focus {
+  outline: none;
+}
