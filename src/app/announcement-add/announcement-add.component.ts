@@ -29,4 +29,8 @@ onSubmit() {
     this.router.navigate(['viewAnnouncements']);
 });
 }
+
+cancel() {
+  this.router.navigate(['viewAnnouncements']);
+}
 }

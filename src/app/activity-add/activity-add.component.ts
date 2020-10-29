@@ -30,4 +30,7 @@ export class ActivityAddComponent implements OnInit {
     });
   }
 
+  cancel() {
+    this.router.navigate(['viewActivities']);
+  }
 }

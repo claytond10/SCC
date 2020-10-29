@@ -54,4 +54,8 @@ onSubmit() {
 });
 }
 
+cancel() {
+  this.router.navigate(['viewLocations']);
+}
+
 }

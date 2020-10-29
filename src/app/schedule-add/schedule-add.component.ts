@@ -43,4 +43,8 @@ onSubmit() {
     this.router.navigate(['viewSchedule']);
   });
 }
+
+cancel() {
+  this.router.navigate(['viewSchedule']);
+}
 }

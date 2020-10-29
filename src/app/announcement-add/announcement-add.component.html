@@ -11,7 +11,8 @@
       <div class="alert alert-danger" *ngIf="addAnnouncementForm.get('announcement').hasError('maxlength')">
           Max field length of 50 characters exceeded.
       </div> 
-      <button class="btn btn-success" (click)="onSubmit()">Save</button>
+      <button class="btn btn-success" (click)="onSubmit()">Save</button>&nbsp;
+      <button class="btn btn-danger" (click)="cancel()">Cancel</button>
     </form>
   </div>
   

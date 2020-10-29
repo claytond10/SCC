@@ -41,4 +41,8 @@ onSubmit() {
     this.router.navigate(['viewLogistics']);
   });
 }
+    
+cancel() {
+  this.router.navigate(['viewLogistics']);
+}
 }
