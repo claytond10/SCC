@@ -9,8 +9,6 @@ if ($result = mysqli_query($con,$sql)) {
 		$locations[$cr]['location_name'] = $row['location_name'];
 		$locations[$cr]['loc_cd'] = $row['loc_cd'];
 		$locations[$cr]['loc_cd_full'] = $row['loc_cd_full'];
-		$locations[$cr]['image_id'] = $row['image_id'];
-		$locations[$cr]['image_html'] = $row['image_html'];
 		$cr++;
 	}
 	echo json_encode($locations);

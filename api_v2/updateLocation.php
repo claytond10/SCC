@@ -9,10 +9,9 @@ if(isset($postdata) && !empty($postdata)) {
 	$id = mysqli_real_escape_string($con, trim($request->id));
 	$location_name = mysqli_real_escape_string($con, trim($request->location_name));
 	$loc_cd = mysqli_real_escape_string($con, trim($request->loc_cd));
-	$image_id = mysqli_real_escape_string($con, trim($request->image_id));
 	
 	//Store 
-	$sql = "CALL sp_UpdateLocation({$id}, '{$location_name}','{$loc_cd}',{$image_id})";
+	$sql = "CALL sp_UpdateLocation({$id}, '{$location_name}','{$loc_cd}')";
 	if(mysqli_query($con,$sql)) {
 		return http_response_code(201);
 	}

@@ -6,11 +6,9 @@ DELIMITER $$
 
 CREATE PROCEDURE `scc`.`sp_UpdateLocation` (IN iId INT,
 											IN iName VARCHAR(50),
-											IN iLocCD CHAR(2),
-											IN iImageID INT)
+											IN iLocCD CHAR(2))
 BEGIN
 	UPDATE location SET location_name = iName,
-						loc_cd = iLocCd,
-						image_id = iImageId
+						loc_cd = iLocCd
 	WHERE id = iId;
 END
