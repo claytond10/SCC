@@ -23,6 +23,14 @@
               </option>
            </select>
       </div>
+      <div class="form-group">
+        <label for="image_id">Image</label>
+        <select formControlName="image_id" id="image_id"> <br />
+          <option *ngFor="let img of images; let i = index" [value]="images[i].id">
+              {{ images[i].image_name }}
+          </option>
+        </select>
+      </div>
         <button class="btn btn-success" (click)="onSubmit()">Save</button>&nbsp;
         <button class="btn btn-danger" (click)="cancel()">Cancel</button>
 

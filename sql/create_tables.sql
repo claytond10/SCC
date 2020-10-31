@@ -43,7 +43,6 @@ CREATE TABLE `scc`.`location` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `location_name` VARCHAR(50) NOT NULL,
   `loc_cd` CHAR(2) NOT NULL,
-  `image_id` INT,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
   UNIQUE INDEX `location_name_UNIQUE` (`location_name` ASC));
@@ -59,6 +58,7 @@ CREATE TABLE `scc`.`logistics` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `log_name` VARCHAR(50) NOT NULL,
   `loc_id` INT NOT NULL,
+  `image_id` INT,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
   UNIQUE INDEX `log_name_UNIQUE` (`log_name` ASC));

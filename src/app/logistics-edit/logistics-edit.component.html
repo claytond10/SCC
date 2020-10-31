@@ -15,13 +15,21 @@
           Max field length of 50 characters exceeded.
       </div> 
 
-        <div class="form-group">
-            <label for="location_id">Location</label>
-            <select formControlName="location_id" id="location_id"> <br />
-                <option *ngFor="let loc of locations; let i = index" [value]="locations[i].id">
-                    {{ locations[i].location_name }}
-                </option>
-             </select>
+      <div class="form-group">
+        <label for="location_id">Location</label>
+        <select formControlName="location_id" id="location_id"> <br />
+          <option *ngFor="let loc of locations; let i = index" [value]="locations[i].id">
+              {{ locations[i].location_name }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="image_id">Image</label>
+        <select formControlName="image_id" id="image_id"> <br />
+          <option *ngFor="let img of images; let i = index" [value]="images[i].id">
+              {{ images[i].image_name }}
+          </option>
+        </select>
       </div>
     <button class="btn btn-success" (click)="update()">Update</button>&nbsp;
     <button class="btn btn-danger" (click)="cancel()">Cancel</button>
