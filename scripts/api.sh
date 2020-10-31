@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# add to ~/.local/bin
 # Move api directory into html directory
 # and set appropriate permissions.
 

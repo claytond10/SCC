@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+# add to ~/.local/bin
 # Run system updates and cleanup
 
 sudo apt update
