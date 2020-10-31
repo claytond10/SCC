@@ -55,5 +55,9 @@ onSubmit() {
     this.router.navigate(['viewUpcomingEvents']);
   });
 }
+
+cancel() {
+  this.router.navigate(['viewUpcomingEvents']);
+}
 }
 
