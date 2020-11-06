@@ -24,7 +24,7 @@
        </div> 
         <div class="alert alert-danger" *ngIf="editUpcomingEventForm.get('event_time').hasError('required') && editUpcomingEventForm.get('event_time').touched">
             Field is required.
-        </div> 
+        </div> &nbsp;
 
         <div class="form-group">
           <label for="location_id">Location</label>
@@ -34,8 +34,6 @@
               </option>
            </select>
       </div>
-
-
       <div class="form-group">
         <label for="contact_id">Contact</label>
         <select formControlName="contact_id" id="contact_id"> <br />
