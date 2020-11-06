@@ -22,6 +22,7 @@ export class ContactEditComponent implements OnInit {
   ngOnInit() {
     const routeParams = this.routes.snapshot.params;
     this._contactService.getContactById(routeParams.id).subscribe((data: any) => {
+      this.editContactForm.patchValue(data);
     });
 
     this.editContactForm = this.formBuilder.group({

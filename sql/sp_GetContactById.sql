@@ -9,5 +9,5 @@ CREATE DEFINER=`scc_dba`@`%` PROCEDURE `sp_GetContactById`(IN iId INT)
 BEGIN
     SELECT id, contact_name, phone, email
     FROM contact
-    WHERE id = iID;
+    WHERE id = iId;
 END
